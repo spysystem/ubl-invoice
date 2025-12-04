@@ -8,4 +8,5 @@
   - `Address::setAddressLines(array $addressLines)` - set all address lines
   - `Address::addAddressLine(AddressLine $addressLine)` - add a single address line
   - Supports multiple `<cac:AddressLine>` elements per address (UBL 2.1 compliant)
+- Add `<cac:OriginCountry>` support to `<cac:Item>` for specifying country of origin
 
