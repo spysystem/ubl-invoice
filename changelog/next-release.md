@@ -9,4 +9,8 @@
   - `Address::addAddressLine(AddressLine $addressLine)` - add a single address line
   - Supports multiple `<cac:AddressLine>` elements per address (UBL 2.1 compliant)
 - Add `<cac:OriginCountry>` support to `<cac:Item>` for specifying country of origin
+- Add `DespatchDocumentReference` support to `Invoice`
+  - New `DespatchDocumentReference` class with `id` property
+  - Added `getDespatchDocumentReference()` / `setDespatchDocumentReference()` methods to `Invoice`
+  - Full support for XML serialization and deserialization
 
