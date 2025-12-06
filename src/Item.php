@@ -214,6 +214,12 @@ class Item implements XmlSerializable, XmlDeserializable
             ]);
         }
 
+        if (!empty($this->getOriginCountry())) {
+            $writer->write([
+                Schema::CAC . 'OriginCountry' => $this->originCountry
+            ]);
+        }
+
         if (!empty($this->getCommodityClassification())) {
             $writer->write([
                 Schema::CAC . 'CommodityClassification' => $this->commodityClassification
@@ -223,12 +229,6 @@ class Item implements XmlSerializable, XmlDeserializable
         if (!empty($this->getClassifiedTaxCategory())) {
             $writer->write([
                 Schema::CAC . 'ClassifiedTaxCategory' => $this->classifiedTaxCategory
-            ]);
-        }
-
-        if (!empty($this->getOriginCountry())) {
-            $writer->write([
-                Schema::CAC . 'OriginCountry' => $this->originCountry
             ]);
         }
     }
